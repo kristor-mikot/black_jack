@@ -25,7 +25,6 @@ public:
 	int set_value();
 	int get_value();
 	void text();
-	/*void set_karta();*/
 	void set_chis(int _chis);
 	void set_mast(int _mast);
 	int get_chis();

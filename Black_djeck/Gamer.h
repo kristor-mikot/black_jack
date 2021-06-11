@@ -8,7 +8,6 @@ class Gamer
 private:
 	string name;
 	int money;
-	int razm = 2;
 	Karta *karti=new Karta[razm];
 	int proverka();
 public:
@@ -39,5 +38,8 @@ public:
 	int get_money();
 	Karta *get_karti();
 	int summa_kart(Karta *karti);
+	void vivod();
+	void set_karti();
+	int razm = 2;
 };
 

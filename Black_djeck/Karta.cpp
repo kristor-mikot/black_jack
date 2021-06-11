@@ -78,6 +78,8 @@ void Karta::text()
 		cout << "Piki ";
 }
 
+
+
 void Karta::set_chis(int _chis)
 {
 	chis = _chis;

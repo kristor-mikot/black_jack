@@ -78,3 +78,30 @@ int Gamer::summa_kart(Karta* karti)
 	}
 	return summ;
 }
+
+void Gamer::vivod()
+{
+	for (int i = 0;i < razm;i++)
+	{
+		cout << endl;
+		karti[i].text();
+	}
+	cout << endl;
+}
+
+void Gamer::set_karti()
+{
+	karti[0] = Karta((rand() % 12) + 2, (rand() % 3) + 1);
+	karti[1] = Karta((rand() % 12) + 2, (rand() % 3) + 1);
+	while (true)
+	{
+		if ((karti[1].get_chis() == karti[0].get_chis()) && (karti[1].get_mast() == karti[0].get_mast()))
+		{
+			karti[1] = Karta((rand() % 12) + 2, (rand() % 3) + 1);
+		}
+		else
+		{
+			break;
+		}
+	}
+}

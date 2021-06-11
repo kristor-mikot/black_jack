@@ -20,18 +20,26 @@ int main()
 	{
 		while (true)
 		{
+			gamer1.razm = 2;
+			gamer2.razm = 2;
+			gamer1.set_karti();
+			gamer2.set_karti();
+			cout << "\nВаш счёт: " << gamer1.get_money();
+			cout << "\nМой счёт: " << gamer2.get_money();
 			cout << "\nСколько хотите поставить?";
 			cin >> resh;
 			if (gamer1.get_money() - resh >= 0)
 			{
 				cout << "\nОтлично,играем";
-				cout << "У вас счёт: " << gamer1.summa_kart(gamer1.get_karti()) << "\nХотите взять ещё карту?";
+				gamer1.vivod();
+				cout << "\nУ вас счёт: " << gamer1.summa_kart(gamer1.get_karti()) << "\nХотите взять ещё карту?";
 				cin >> resh2;
 				if (resh2 == "да")
 				{
 					while (true)
 					{
 						gamer1.dobav_kart();
+						gamer1.vivod();
 						cout << "\nНовый счёт: " << gamer1.summa_kart(gamer1.get_karti());
 						if (gamer1.summa_kart(gamer1.get_karti()) > 21)
 							break;
@@ -42,6 +50,7 @@ int main()
 						
 					}
 				}
+				gamer2.vivod();
 				cout << "Мой счёт: " << gamer2.summa_kart(gamer2.get_karti()) << "\nХочу ли я взять ещё одну карту?";
 				cin >> resh2;
 				if (resh2 == "да")
@@ -49,6 +58,7 @@ int main()
 					while (true)
 					{
 						gamer2.dobav_kart();
+						gamer2.vivod();
 						cout << "\nНовый счёт: " << gamer2.summa_kart(gamer2.get_karti());
 						if (gamer2.summa_kart(gamer2.get_karti()) > 21)
 							break;
@@ -61,7 +71,7 @@ int main()
 				if ((gamer1.summa_kart(gamer1.get_karti()) > gamer2.summa_kart(gamer2.get_karti())) && gamer1.summa_kart(gamer1.get_karti()) <= 21)
 				{
 					cout << "\nВы выиграли";
-					gamer1.plus_money(resh);
+					gamer1.plus_money(resh * 1.5);
 					gamer2.minus_money(resh);
 					if (gamer2.get_money() <= 0)
 					{
@@ -74,7 +84,7 @@ int main()
 				{
 					cout << "\nЯ победил в этот раз";
 					gamer1.minus_money(resh);
-					gamer2.plus_money(resh);
+					gamer2.plus_money(resh * 1.5);
 					if (gamer1.get_money() <= 0)
 					{
 						cout << "\nУ вас деньги закончились,но игра была хорошая\nНу,я пошёл";
@@ -103,7 +113,7 @@ int main()
 				else if ((gamer1.summa_kart(gamer1.get_karti()) <=21)  && gamer2.summa_kart(gamer1.get_karti()) > 21)
 				{
 					cout << "\nВы выиграли";
-					gamer1.plus_money(resh);
+					gamer1.plus_money(resh * 1.5);
 					gamer2.minus_money(resh);
 					if (gamer2.get_money() <= 0)
 					{
@@ -116,7 +126,7 @@ int main()
 				{
 					cout << "\nЯ победил в этот раз";
 					gamer1.minus_money(resh);
-					gamer2.plus_money(resh);
+					gamer2.plus_money(resh*1.5);
 					if (gamer1.get_money() <= 0)
 					{
 						cout << "\nУ вас деньги закончились,но игра была хорошая\nНу,я пошёл";

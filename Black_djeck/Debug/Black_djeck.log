@@ -1,2 +1,7 @@
-﻿  Gamer.cpp
+﻿  Black_djeck.cpp
+C:\Users\student\source\repos\Black_djeck\Black_djeck\Black_djeck.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\student\source\repos\Black_djeck\Black_djeck\Black_djeck.cpp(74,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\student\source\repos\Black_djeck\Black_djeck\Black_djeck.cpp(87,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\student\source\repos\Black_djeck\Black_djeck\Black_djeck.cpp(116,29): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\student\source\repos\Black_djeck\Black_djeck\Black_djeck.cpp(129,28): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
   Black_djeck.vcxproj -> C:\Users\student\source\repos\Black_djeck\Debug\Black_djeck.exe
